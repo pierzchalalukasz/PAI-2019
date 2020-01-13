@@ -9,26 +9,35 @@
     </head>
     <body>
         <div class="container">
-            <div class="loginFormWrapper">
-                <div class="loginSection">
-                    <span id="create">Sign in</span>
-                    <img class="logoImg" src="../Public/img/logo.svg">
+            <div class="logo">
+                <img class="logo-img" src="../Public/img/logo.svg">
+                <img class="logo-text" src="../Public/img/walletstats.svg">
+            </div>
+            <div class="form-wrapper">
+                <div class="sign-header">
+                    <span id="sign-header-text">Sign up</span>
+                    <img id="sign-header-logo" src="../Public/img/logo.svg"/>
                 </div>
-                <div class="form">
-                    <div class="usernameLogWrapper">
-                        <input type="text" name="username" required />
-                        <label for="username" class="label-name">
-                            <span class="content-name">Username</span>
+                <form>
+                    <div class="input-wrapper">
+                        <input id="login-mail" type="text" name="email" required />
+                        <label for="email" class="label-name">
+                            <span class="content-name">E-mail</span>
                         </label>
                     </div>
-                    <div class="passwordLogWrapper">
-                        <input type="password" name="pass" required />
-                        <label for="pass" class="label-name">
+                    <div class="input-wrapper">
+                        <input id="login-password" type="password" name="password" required />
+                        <label for="password" class="label-name">
                             <span class="content-name">Password</span>
                         </label>
                     </div>
-                    <button type="submit">Sign in</button>
+                    <button id="login-submit" type="submit" name="submit">SIGN IN</button>
+                </form>
+                <div class="sign-footer">
+                    <span class="sign-span">New to Wallet Stats?</span>
+                    <a class="sign-link"href="register.html"><span>Sign up »</span></a>
                 </div>
+                <p class="form-message"></p>
             </div>
         </div>
     </body>

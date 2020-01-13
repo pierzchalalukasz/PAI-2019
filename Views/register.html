@@ -9,49 +9,53 @@
     </head>
     <body>
         <div class="container">
-            <div class="formWrapper">
-                <div class="createSection">
-                    <span id="create">Sign up</span>
-                    <img class="logoImg" src="../Public/img/logo.svg">
+            <div class="form-wrapper">
+                <div class="sign-header">
+                    <span id="sign-header-text">Sign up</span>
+                    <img id="sign-header-logo" src="../Public/img/logo.svg"/>
                 </div>
-                <div class="form">
-                    <div class="inputWrapper">
+                <form>
+                    <div class="input-wrapper">
                         <input type="text" name="name" required />
                         <label for="name" class="label-name">
                             <span class="content-name">Name</span>
                         </label>
                     </div>
-                    <div class="inputWrapper">
+                    <div class="input-wrapper">
                         <input type="text" name="surname" required />
                         <label for="surname" class="label-name">
                             <span class="content-name">Surname</span>
                         </label>
                     </div>
-                    <div class="inputWrapper">
+                    <div class="input-wrapper">
                         <input type="text" name="username" required />
                         <label for="username" class="label-name">
                             <span class="content-name">Username</span>
                         </label>
                     </div>
-                    <div class="inputWrapper">
-                        <input type="email" name="email" required />
+                    <div class="input-wrapper">
+                        <input type="text" name="email" required />
                         <label for="email" class="label-name">
-                            <span class="content-name">e-mail</span>
+                            <span class="content-name">E-mail</span>
                         </label>
                     </div>
-                    <div class="inputWrapper">
+                    <div class="input-wrapper">
                         <input type="password" name="pass" required />
                         <label for="pass" class="label-name">
                             <span class="content-name">Password</span>
                         </label>
                     </div>
-                    <div class="inputWrapper">
+                    <div class="input-wrapper">
                         <input type="password" name="repass" required />
                         <label for="repass" class="label-name">
                             <span class="content-name">Repeat password</span>
                         </label>
                     </div>
-                    <button type="submit">Sign up</button>
+                    <button type="submit">SIGN UP</button>
+                </form>
+                <div class="sign-footer">
+                    <span class="sign-span">Have you got an account yet?</span>
+                    <a class="sign-link"href="login.html"><span>Sign in »</span></a>
                 </div>
             </div>
         </div>
