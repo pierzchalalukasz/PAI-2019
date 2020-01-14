@@ -1,5 +1,6 @@
 <?php
 require_once 'Controllers\HomeController.php';
+require_once 'Controllers\SecurityController.php';
 
 class Routing {
     private $routes = [];
@@ -10,6 +11,14 @@ class Routing {
                'home'  => [
                    'controller' => 'HomeController',
                    'action' => 'home'
+                ],
+               'login' => [
+                'controller' => 'SecurityController',
+                'action' => 'login'
+               ],
+               'register' => [
+                   'controller' => 'SecurityController',
+                   'action' => 'register'
                ]
         ];
     }

@@ -76,6 +76,12 @@ span    {
     color: rgb(55, 124, 131);
 }
 
+form    {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 button {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -236,7 +242,7 @@ a:hover {
         margin-top: .75em;
     }
 
-    #socialYt   {
+    #social-yt   {
         margin-top: .75em;
         width: 14%;
     }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="../Public/css/forms.css" />
+        <link rel="stylesheet" href="Public/css/forms.css" />
         <title>Wallet Stats | Sign up</title>
     </head>
     <body>
@@ -12,7 +12,7 @@
             <div class="form-wrapper">
                 <div class="sign-header">
                     <span id="sign-header-text">Sign up</span>
-                    <img id="sign-header-logo" src="../Public/img/logo.svg"/>
+                    <img id="sign-header-logo" src="Public/img/logo.svg"/>
                 </div>
                 <form>
                     <div class="input-wrapper">
@@ -55,7 +55,7 @@
                 </form>
                 <div class="sign-footer">
                     <span class="sign-span">Have you got an account yet?</span>
-                    <a class="sign-link"href="login.html"><span>Sign in »</span></a>
+                    <a class="sign-link"href="?page=login"><span>Sign in »</span></a>
                 </div>
             </div>
         </div>
