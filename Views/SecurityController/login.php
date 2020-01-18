@@ -18,7 +18,7 @@
                     <span id="sign-header-text">Sign in</span>
                     <img id="sign-header-logo" src="Public/img/logo.svg"/>
                 </div>
-                <form action="?page=login" method="post">
+                <form action="?page=login" method="post" autocomplete="off">
                 <div class="messages">
                     <?php
                         if(isset($messages)){
