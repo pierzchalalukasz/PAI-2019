@@ -3,6 +3,7 @@ require_once 'Controllers\HomeController.php';
 require_once 'Controllers\SecurityController.php';
 require_once 'Controllers\StatsController.php';
 require_once 'Controllers\AdminController.php';
+require_once 'Controllers\ContactController.php';
 
 class Routing {
     private $routes = [];
@@ -43,8 +44,12 @@ class Routing {
                    'action' => 'users'
                ],
                'admin_delete_user' => [
-                'controller' => 'AdminController',
-                'action' => 'userDelete'
+                   'controller' => 'AdminController',
+                   'action' => 'userDelete'
+               ],
+               'contact' => [
+                   'controller' => 'ContactController',
+                   'action' => 'contact'
                ]               
         ];
     }

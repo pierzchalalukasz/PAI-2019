@@ -11,10 +11,10 @@
 <div class="nav-wrapper">
     <img class="light-wallet" src="Public/img/wallet-light.svg">
     <nav>
-        <ul>
+        <ul class="nav-links">
             <li><a href="?page=stats">MY STATS</a></li>
             <li><a href="?page=create-stats">UPLOAD A FILE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="?page=contact">CONTACT</a></li>
             <?php if(in_array('ROLE_ADMIN', $_SESSION['role'])) {
                 echo "<li><a href=\"?page=admin\">ADMIN PANEL</a></li>";    
             }?>
@@ -22,6 +22,30 @@
     </nav>
     <span class="logged-user"><?= $_SESSION['username'] ?></span>
     <form action="?page=logout" method="POST">
-        <button class="btn-small" type="submit">LOGOUT</button>
+        <button id="btn-logout" class="btn-small" type="submit">LOGOUT</button>
     </form>
+    <img id="burger" src="Public/img/list.svg">
 </div>
+<script>
+    const navSlide = () =>  {
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('li');
+
+
+        burger.addEventListener('click',()=>{
+            nav.classList.toggle('nav-active');
+
+            navLinks.forEach((link, index)  =>  {
+                if(link.style.animation)    {
+                    link.style.animation = ''
+                }   else    {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .5}s`;
+                }
+            });
+            burger.classList.toggle('toggle');
+        });
+    }
+
+    navSlide();
+</script>

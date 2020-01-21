@@ -24,14 +24,14 @@
             <h3>December 2019</h3>
         </div>
         <div class="pie-chart">
-          <canvas style="height:40vh; width:50vw" id="myChart"></canvas>
+          <canvas id="myChart"></canvas>
         </div>
       </div>
-      <div class="buttons">
+      <!-- <div class="buttons">
         <button class="btn-chart" type="button" onclick="createPie()">pie</button>
         <button class="btn-chart" type="button" onclick="createDoughnut()">doughnut</button>
         <button class="btn-chart" type="button" onclick="clearCanv()">clear</button>
-      </div>
+      </div> -->
     </div>  
   </div>
 

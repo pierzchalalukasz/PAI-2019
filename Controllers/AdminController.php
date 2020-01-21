@@ -9,7 +9,11 @@ class AdminController extends AppController {
     public function index()
     {
         $userRepository = new UserRepository();
-        $this->render('users', ['user' => $userRepository->getUser($_SESSION['id'])]);
+        if(isset($_SESSION['id']))  {
+            $this->render('users', ['user' => $userRepository->getUser($_SESSION['id'])]);
+        }   else    {
+            echo "You are not logged in!";
+        }
     }
 
     public function users(): void

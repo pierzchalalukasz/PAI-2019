@@ -2,7 +2,6 @@ config.php
 Views/about.html
 Views/contact.html
 Public/css/about.css
-Public/css/contact.css
 Public/css/inputs.css
 Public/img/happy.png
 Public/img/wallet-light.svg
@@ -10,3 +9,5 @@ package.json
 package-lock.json
 .vscode
 node_modules
+Public/js/main.js
+Public/js/parser.js
