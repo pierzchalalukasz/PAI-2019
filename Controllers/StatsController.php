@@ -7,5 +7,10 @@ class StatsController extends AppController {
     {
         $this->render('stats');
     }
+
+    public function createStats()
+    {
+        $this->render('create-stats');
+    }
 }
 ?>

@@ -11,7 +11,7 @@ class SecurityController extends AppController {
         $userRepository = new UserRepository();
 
         if ($this->isPost()) {
-            if(!empty($_POST))   {
+            if(isset($_POST['submit']))   {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
@@ -26,9 +26,14 @@ class SecurityController extends AppController {
                     $this->render('login', ['messages' => ['Wrong password!']]);
                     return;
                 }
+                // die(var_dump($user->getRole()));
+                $_SESSION['id'] = $user->getEmail();
+                $_SESSION['username'] = $user->getUsername();
+                $_SESSION['role'] = $user->getRole();
 
                 $url = "http://$_SERVER[HTTP_HOST]/";
-                header("Location: {$url}/PAI/?page=stats");    
+                header("Location: {$url}/PAI/?page=create-stats");
+                return;
             }
         }
 
@@ -65,7 +70,14 @@ class SecurityController extends AppController {
                 }
             }
         }
-
         $this->render('register');
+    }
+
+    public function logout(): void
+    {
+        session_unset();
+        session_destroy();
+
+        $this->render('login', ['messages' => ['You have been successfully logged out!']]);
     }
 }

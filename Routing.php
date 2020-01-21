@@ -2,6 +2,7 @@
 require_once 'Controllers\HomeController.php';
 require_once 'Controllers\SecurityController.php';
 require_once 'Controllers\StatsController.php';
+require_once 'Controllers\AdminController.php';
 
 class Routing {
     private $routes = [];
@@ -21,10 +22,30 @@ class Routing {
                    'controller' => 'SecurityController',
                    'action' => 'register'
                ],
+               'logout' => [
+                   'controller' => 'SecurityController',
+                   'action' => 'logout'
+               ],
                'stats' => [
                    'controller' => 'StatsController',
                    'action' => 'stats'
-               ]
+               ],
+               'create-stats' => [
+                   'controller' => 'StatsController',
+                   'action' => 'createStats'
+               ],
+               'admin' => [
+                   'controller' => 'AdminController',
+                   'action' => 'index'
+               ],
+               'users' => [
+                   'controller' => 'AdminController',
+                   'action' => 'users'
+               ],
+               'admin_delete_user' => [
+                'controller' => 'AdminController',
+                'action' => 'userDelete'
+               ]               
         ];
     }
 

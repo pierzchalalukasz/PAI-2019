@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="Public/css/forms.css" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="Public/js/main.js"></script>
         <title>Wallet Stats | Sign in</title>
     </head>
     <body>
@@ -19,7 +21,7 @@
                     <img id="sign-header-logo" src="Public/img/logo.svg"/>
                 </div>
                 <form action="?page=login" method="post" autocomplete="off">
-                <div class="messages">
+                <div class="messages" id="messages">
                     <?php
                         if(isset($messages)){
                             foreach($messages as $message) {
@@ -40,7 +42,7 @@
                             <span class="content-name">Password</span>
                         </label>
                     </div>
-                    <button id="login-submit" type="submit" name="submit">SIGN IN</button>
+                    <button id="login-submit" onclick="checkIfEmpty()" type="submit" name="submit">SIGN IN</button>
                 </form>
                 <div class="sign-footer">
                     <span class="sign-span">New to Wallet Stats?</span>

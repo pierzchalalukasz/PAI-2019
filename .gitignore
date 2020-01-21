@@ -7,4 +7,6 @@ Public/css/inputs.css
 Public/img/happy.png
 Public/img/wallet-light.svg
 package.json
+package-lock.json
 .vscode
+node_modules

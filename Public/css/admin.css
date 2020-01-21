@@ -1,0 +1,58 @@
+@import "fonts.css";
+
+html, body {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+h1  {
+    font-size: 3.5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    color: #1E0478;
+    margin-bottom: .5em;
+}
+
+h2  {
+    font-size: 2.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #8978BF;
+}
+
+.my-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-wrapper  {
+    width: 80%;
+    /* height: auto; */
+    padding: 2em;
+    background: white;
+}
+
+.col-13 {
+    overflow-x: auto;
+}
+
+th  {
+    background: #8978BF;
+}
+
+#btn-admin:hover    {
+    background: rgb(20, 2, 88);
+    color: #FFFFFF;
+}
+
+#btn-delete {
+    background: red;
+    color: #FFFFFF;
+}

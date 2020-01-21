@@ -7,7 +7,6 @@ html, body {
     padding: 0;
     max-width: 100%;
     height: 100%;
-    /* overflow: auto; */
 }
 
 .container  {
@@ -86,13 +85,17 @@ form   {
 .messages {
     color: red;
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: "Lato", sans-serif;
     font-weight: 700;
-    padding: .5em;
-    margin-bottom: .5em;
-    background: rgb(233, 169, 169);
+    /* padding: .5em; */
+    /* margin-bottom: .5em; */
+    /* background: rgb(233, 169, 169); */
     /* display: none; */
+}
+
+.error-occured  {
+    display: block;
 }
 
 .textWrapper    {
@@ -146,6 +149,7 @@ button {
 
     font-family: "Montserrat", sans-serif;
     color: #FFFFFF;
+    letter-spacing: .1em;
     text-align: center;
 
     transition: 0.3s;
