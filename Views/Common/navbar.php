@@ -14,7 +14,7 @@
         <ul class="nav-links">
             <li><a href="?page=stats">MY STATS</a></li>
             <li><a href="?page=create-stats">UPLOAD A FILE</a></li>
-            <li><a href="?page=contact">CONTACT</a></li>
+            <li><a href="?page=profile">MY PROFILE</a></li>
             <?php if(in_array('ROLE_ADMIN', $_SESSION['role'])) {
                 echo "<li><a href=\"?page=admin\">ADMIN PANEL</a></li>";    
             }?>

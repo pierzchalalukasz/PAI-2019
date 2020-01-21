@@ -26,10 +26,13 @@ class SecurityController extends AppController {
                     $this->render('login', ['messages' => ['Wrong password!']]);
                     return;
                 }
-                // die(var_dump($user->getRole()));
+                $_SESSION['user_id'] = $user->getId();
                 $_SESSION['id'] = $user->getEmail();
                 $_SESSION['username'] = $user->getUsername();
                 $_SESSION['role'] = $user->getRole();
+                $_SESSION['time'] = date("Y-m-d H:i:s");
+
+                $userRepository->addLog($_SESSION['user_id'], $_SESSION['time']);
 
                 $url = "http://$_SERVER[HTTP_HOST]/";
                 header("Location: {$url}/PAI/?page=create-stats");

@@ -4,6 +4,7 @@ require_once 'Controllers\SecurityController.php';
 require_once 'Controllers\StatsController.php';
 require_once 'Controllers\AdminController.php';
 require_once 'Controllers\ContactController.php';
+require_once 'Controllers\ProfileController.php';
 
 class Routing {
     private $routes = [];
@@ -50,7 +51,11 @@ class Routing {
                'contact' => [
                    'controller' => 'ContactController',
                    'action' => 'contact'
-               ]               
+               ],
+               'profile' => [
+                   'controller' => 'ProfileController',
+                   'action' => 'profile'
+               ]
         ];
     }
 

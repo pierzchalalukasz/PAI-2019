@@ -10,13 +10,18 @@ function getUsers() {
         $list.empty();
         
         res.forEach(el => {
+            if(el.role_id == 2) {
+                role = 'ROLE_ADMIN';
+            }   else    {
+                role = 'ROLE_USER';
+            }
             $list.append(`<tr>
                         <td>${el.user_id}</td>
                         <td>${el.email}</td>
                         <td>${el.name}</td>
                         <td>${el.surname}</td>
                         <td>${el.username}</td>
-                        <td>${el.role}</td>
+                        <td>${role}</td>
                         <td>
                             <button id="btn-delete" class="btn-small" type="button"
                             onclick="deleteUser(${el.user_id})">

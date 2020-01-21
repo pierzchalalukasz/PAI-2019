@@ -8,7 +8,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -32,6 +32,8 @@ h2  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 72px;
+    overflow-y: scroll;
 }
 
 .panel-wrapper  {
@@ -49,6 +51,10 @@ th  {
     background: #8978BF;
 }
 
+th, td  {
+    text-align: center;
+}
+
 #btn-admin:hover    {
     background: rgb(20, 2, 88);
     color: #FFFFFF;
@@ -57,4 +63,5 @@ th  {
 #btn-delete {
     background: red;
     color: #FFFFFF;
+    margin: 0 auto;
 }

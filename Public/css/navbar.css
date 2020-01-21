@@ -3,11 +3,13 @@ body::-webkit-scrollbar {
 }
 
 .nav-wrapper    {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-background: #1E0476;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #1E0476;
 }
 
 .navLogo    {
@@ -106,16 +108,16 @@ a:hover {
 
     ul  {
         position: absolute;
-        right: 0px;
+        width: 40%;
+        right: -40%;
         top: 72px;
         background-color: #1E0476;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60%;
-        max-width: 250px;
-        transform: translateX(100%);
+        transform: translateX(0%);
         transition: transform 0.5s ease-in;
+        z-index: 2;
     }
 
     li   {
@@ -143,7 +145,14 @@ a:hover {
 }
 
 .nav-active    {
-    transform: translateX(0%);
+    transform: translateX(-100%);
+}
+
+@media screen and (max-width: 500px) {
+    ul  {
+        width: 60%;
+        right: -60%;
+    }
 }
 
 @keyframes navLinkFade  {
