@@ -11,7 +11,7 @@ $(document).ready(function () {
       const filePath = document.getElementById('file-path');
       filePath.innerHTML = `Selected file: ${file.name}`;
       filePath.style.fontWeight = 700;
-
+      
       console.log(file.name);
 
       const fileReader = new FileReader();

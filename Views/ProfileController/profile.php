@@ -40,9 +40,9 @@
                             <td><?= $details->getPhoneNumber(); ?></td>
                         </tr>
                 </table>
-                <button id="btn-admin" class="btn-small" type="button">
+                <!-- <button id="btn-admin" class="btn-small" type="button">
                     EDIT DATA    
-                </button>
+                </button> -->
             </div>
             </div>
     </div>

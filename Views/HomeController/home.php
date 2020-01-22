@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <link rel="Stylesheet" type="text/css" href="Public/css/style.css"/>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="Public/js/navbar.js"></script>
         <title>Wallet Stats | Home</title>
     </head>
     <body>
