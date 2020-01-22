@@ -28,10 +28,6 @@ class Routing {
                    'controller' => 'SecurityController',
                    'action' => 'logout'
                ],
-               'stats' => [
-                   'controller' => 'StatsController',
-                   'action' => 'stats'
-               ],
                'create-stats' => [
                    'controller' => 'StatsController',
                    'action' => 'createStats'

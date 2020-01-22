@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="Public/js/navbar.js"></script>
   <script src="Public/js/parser.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -31,8 +32,7 @@
             </div>
             <div class="column-2">
               <div class="file-name">
-                <span>file name: </span>
-                <span class="invisible" id="file-path"></span>
+                <span id="file-path">No file selected</span>
               </div>
             </div>
           </div>

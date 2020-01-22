@@ -12,6 +12,12 @@ html, body {
     overflow-y: scroll;
 }
 
+h2  {
+    font-family: "Lato", sans-serif;
+    font-size: 2.2rem;
+    color: #8978BF;
+}
+
 .container  {
     display: flex;
     padding: 0;
@@ -109,6 +115,7 @@ label   {
     justify-content: center;
     font-family: "Lato", sans-serif;
     padding: .75em 1em;
+    margin-right: 0;
     background: green;
     color: white;
     cursor: pointer;
@@ -131,14 +138,13 @@ label:hover {
 .column-1 {
     display: flex;
     flex-direction: column;
-    width: 50%;
     align-items: flex-start;
 }
 
 .column-2 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 55%;
     align-items: center;
 }
 
@@ -156,11 +162,12 @@ span    {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 90%;
-    padding: .7em .5em;
-    border: 1px solid #1E0476;
+    width: 100%;
+    padding: .75em .5em;
+    /* border: 1px solid #1E0476; */
     background: #cccccc;
     overflow-x: hidden;
+    margin-left: 0;
 }
 
 .buttons    {
@@ -210,6 +217,14 @@ span    {
         background: transparent;
         width: 100%;
         box-shadow: none;
+    }
+
+    .file-container, .sign-header {
+        width: 90%;
+    }
+
+    .column-2   {
+        width: 64%;
     }
 
     #sign-header-logo   {

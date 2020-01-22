@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="Public/css/navbar.css" />
         <link rel="stylesheet" href="Public/css/contact.css" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="Public/js/navbar.js"></script>
         <title>Wallet Stats | Contact</title>
     </head>
     <body>
@@ -19,7 +21,16 @@
                     <img id="contact-header-logo" src="Public/img/logo.svg"/>
                 </div>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" action="?page=contact" method="POST">
+            <div class="messages" id="messages">
+                <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                ?>
+            </div>
                 <div class="inputWrapper">
                     <input type="text" name="e-mail" required autocomplete="off" />
                     <label for="e-mail" class="label-name">
@@ -37,7 +48,7 @@
                     <span class="msg-body--label">Message Body</span>
                     <span class="span-for-border"></span>
                 </div>
-                <button type="submit" class="btn--huge">SUBMIT</button>
+                <button type="submit" name="submit" class="btn--huge">SUBMIT</button>
             </form>
         </div>
     </body>

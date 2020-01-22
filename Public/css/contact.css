@@ -80,6 +80,13 @@ h2  {
     width: 100%;
 }
 
+.messages {
+    color: red;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
 .btn--huge {
     margin: 9.5em 0 2.5em 0;
     background: #1E0476;
@@ -154,6 +161,10 @@ h2  {
         width: 100%;
         background: transparent;
         box-shadow: none;
+    }
+
+    .contact-header, .contact-form  {
+        width: 90%;
     }
 
     #contact-header-logo    {

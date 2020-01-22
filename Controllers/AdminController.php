@@ -12,7 +12,7 @@ class AdminController extends AppController {
         if(isset($_SESSION['id']))  {
             $this->render('users', ['user' => $userRepository->getUser($_SESSION['id'])]);
         }   else    {
-            echo "You are not logged in!";
+            die("<h2>You are not logged in!</h2>");
         }
     }
 
@@ -39,5 +39,4 @@ class AdminController extends AppController {
         
         http_response_code(200);
     }
-
 }

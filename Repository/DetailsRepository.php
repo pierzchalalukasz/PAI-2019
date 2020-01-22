@@ -8,7 +8,7 @@ class DetailsRepository extends Repository {
     public function getDetails()
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM full_user WHERE user_id = :id
+            SELECT * FROM full_user_details WHERE user_id = :id
         ');
         $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_STR);
         $stmt->execute();
@@ -20,8 +20,8 @@ class DetailsRepository extends Repository {
         }
 
         return new Details(
-            1,
-            1,
+            $details['details_id'],
+            $details['address_id'], 
             $details['phone_number'],
             $details['name'],
             $details['surname'],

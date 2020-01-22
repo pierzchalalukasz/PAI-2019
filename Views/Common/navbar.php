@@ -1,10 +1,10 @@
 <?php
     if(!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
-        die('You are not logged in!');
+        die('<h2>You are not logged in!</h2>');
     }
 
     if(!in_array('ROLE_USER', $_SESSION['role'])) {
-        die('You do not have permission to watch this page!');
+        die('<h2>You do not have permission to watch this page!<h2>');
     }
 ?>
 
@@ -12,6 +12,7 @@
     <img class="light-wallet" src="Public/img/wallet-light.svg">
     <nav>
         <ul class="nav-links">
+            <li class="username"><a class="username"><?=$_SESSION['username']?></a></li>
             <li><a href="?page=create-stats">MAKE A CHART</a></li>
             <li><a href="?page=profile">MY PROFILE</a></li>
             <li><a href="?page=contact">CONTACT</a></li>
@@ -31,25 +32,3 @@
         <div class="line-3"></div>
     </div>
 </div>
-<script>
-    const navSlide = () =>  {
-        const burger = document.getElementById('burger');
-        const nav = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('li');
-
-
-        burger.addEventListener('click',()=>{
-            nav.classList.toggle('nav-active');
-
-            navLinks.forEach((link, index)  =>  {
-                if(link.style.animation)    {
-                    link.style.animation = ''
-                }   else    {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .5}s`;
-                }
-            });
-            burger.classList.toggle('toggle');
-        });
-    }
-    navSlide();
-</script>

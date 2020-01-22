@@ -8,6 +8,12 @@ class SecurityController extends AppController {
 
     public function login()
     {   
+        if(isset($_SESSION['id']))    {
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}/PAI/?page=create-stats");
+            return;
+        }
+
         $userRepository = new UserRepository();
 
         if ($this->isPost()) {
@@ -45,6 +51,11 @@ class SecurityController extends AppController {
 
     public function register()
     {
+        if(isset($_SESSION['id']))    {
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}/PAI/?page=create-stats");
+            return;
+        }
 
         $userRepository = new UserRepository();
 

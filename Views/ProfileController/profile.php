@@ -6,14 +6,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <link rel="Stylesheet" type="text/css" href="Public/css/navbar.css" />
     <link rel="Stylesheet" type="text/css" href="Public/css/admin.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="Public/js/navbar.js"></script>
     <script src="Public/js/app.js"></script>
     <title>Wallet Stats | Admin Panel</title>
 </head>
 <body>
     <?php include(dirname(__DIR__).'/Common/navbar.php'); ?>
+    
     <div class="my-container">
         <div class="panel-wrapper">
             <h1>My Profile</h1>
+            <?php if(!isset($details))  {
+                    die("<h2>You haven't added these informations to your profile yet.<h2>");
+            } ?>
             <div class="col-13">
                 <table class="table table-striped table-bordered">
                     <thead>

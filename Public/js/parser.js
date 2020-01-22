@@ -9,14 +9,8 @@ $(document).ready(function () {
       }
       
       const filePath = document.getElementById('file-path');
-      filePath.innerHTML = file.name;
-      const spanElements = document.getElementsByTagName("span");
-      for (let i = 0; i < spanElements.length; i++) {
-        spanElements[i].style.color = '#1E0476';
-        spanElements[i].style.fontWeight = 700;
-    }
-
-      filePath.classList.toggle('invisible');
+      filePath.innerHTML = `Selected file: ${file.name}`;
+      filePath.style.fontWeight = 700;
 
       console.log(file.name);
 
@@ -24,7 +18,6 @@ $(document).ready(function () {
 
       fileReader.onload = function (e) {
           var text = e.target.result;
-          //do something with text
           let data = text.split('\n');
           console.log(data);
           let values = [];
@@ -32,7 +25,7 @@ $(document).ready(function () {
             values[j] = data[i].split(',');
           }
           console.log(values);
-          const foodShops = ['Biedronka','Lidl'];
+          const foodShops = ['Biedronka','Lidl', 'Carrefour'];
           const billsTypes = ['Prad','Czynsz'];
           const entertainmentTypes = ['Kino','Teatr'];
 
@@ -57,8 +50,6 @@ $(document).ready(function () {
 
           let myChart = document.getElementById('myChart').getContext('2d');
       
-
-          // Global Options
           Chart.defaults.global.defaultFontFamily = 'Lato';
           Chart.defaults.global.defaultFontSize = 16;
           Chart.defaults.global.defaultFontColor = '#1E0476';

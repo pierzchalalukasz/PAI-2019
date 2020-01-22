@@ -64,6 +64,14 @@ a:hover {
     margin: 0 2em 0 0;
 }
 
+.username   {
+    display: none;
+}
+
+.username:hover {
+    letter-spacing: .1em;
+}
+
 .btn-small {
     font-size: .8rem;
     font-family: "Montserrat", sans-serif;
@@ -158,6 +166,14 @@ a:hover {
         cursor: pointer;
     }
 
+    .username   {
+        font-size: 1.75rem;
+        color: #FFFFFF;
+        padding: 0;
+        margin-bottom: .75em;
+        display: inline-block;
+    }
+    
     #logout {
         display: inline-block;
     }

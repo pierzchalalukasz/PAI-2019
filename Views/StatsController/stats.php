@@ -26,19 +26,12 @@
           <canvas id="myChart"></canvas>
         </div>
       </div>
-      <!-- <div class="buttons">
-        <button id="create-pie" class="btn-stats btn-chart" type="button" onclick="createPie()">pie</button>
-        <button id="create-dougnut" class="btn-stats btn-chart" type="button" onclick="createDoughnut()">doughnut</button>
-        <button id="clear-canv" class="btn-stats btn-chart" type="button" onclick="clearCanv()">clear</button>
-      </div> -->
     </div>  
   </div>
 
 
   <script>
     let myChart = document.getElementById('myChart').getContext('2d');
-      
-
     // Global Options
     Chart.defaults.global.defaultFontFamily = 'Lato';
     Chart.defaults.global.defaultFontSize = 16;

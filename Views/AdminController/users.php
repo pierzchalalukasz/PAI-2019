@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="Public/js/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <link rel="Stylesheet" type="text/css" href="Public/css/navbar.css" />
     <link rel="Stylesheet" type="text/css" href="Public/css/admin.css" />
@@ -12,7 +13,7 @@
 <body>
     <?php include(dirname(__DIR__).'/Common/navbar.php'); 
     if(!in_array('ROLE_ADMIN', $_SESSION['role'])) {
-        die('You do not have permission to watch this page!');
+        die('<h2>You do not have permission to watch this page!</h2>');
     }
     ?>
 
