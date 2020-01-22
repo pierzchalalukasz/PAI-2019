@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-  <!-- <script src="Public/js/main.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="Public/css/chart.css">
   <link rel="stylesheet" href="Public/css/navbar.css">
@@ -27,18 +26,17 @@
           <canvas id="myChart"></canvas>
         </div>
       </div>
-      <div class="buttons">
+      <!-- <div class="buttons">
         <button id="create-pie" class="btn-stats btn-chart" type="button" onclick="createPie()">pie</button>
         <button id="create-dougnut" class="btn-stats btn-chart" type="button" onclick="createDoughnut()">doughnut</button>
         <button id="clear-canv" class="btn-stats btn-chart" type="button" onclick="clearCanv()">clear</button>
-      </div>
+      </div> -->
     </div>  
   </div>
 
 
   <script>
-    const createPie = () =>  {
-      let myChart = document.getElementById('myChart').getContext('2d');
+    let myChart = document.getElementById('myChart').getContext('2d');
       
 
     // Global Options
@@ -53,9 +51,9 @@
         datasets:[{
           label:'Ammount of money',
           data:[
-            45,
-            35,
-            20,
+            423.35,
+            352.34,
+            229.74,
           ],
           backgroundColor:[
             '#1E0476',
@@ -94,17 +92,9 @@
         }
       }
     });
-    if(massPopChart)  {
-        massPopChart.destroy();
-      }
-    }
 
     const createDoughnut = () =>  {
-      let myChart = document.getElementById('myChart').getContext('2d');
-
-      // if(massPopChart)  {
-      //   massPopChart.destroy();
-      // }
+    let myChart = document.getElementById('myChart').getContext('2d');
 
     // Global Options
     Chart.defaults.global.defaultFontFamily = 'Lato';
@@ -118,9 +108,9 @@
         datasets:[{
           label:'Ammount of money',
           data:[
-            45,
-            35,
-            20,
+            423.35,
+            352.34,
+            229.74,
           ],
           backgroundColor:[
             '#1E0476',

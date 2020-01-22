@@ -11,7 +11,6 @@
 </head>
 <body>
     <?php include(dirname(__DIR__).'/Common/navbar.php'); ?>
-
     <div class="my-container">
         <div class="panel-wrapper">
             <h1>My Profile</h1>

@@ -12,19 +12,24 @@
     <img class="light-wallet" src="Public/img/wallet-light.svg">
     <nav>
         <ul class="nav-links">
-            <li><a href="?page=stats">MY STATS</a></li>
-            <li><a href="?page=create-stats">UPLOAD A FILE</a></li>
+            <li><a href="?page=create-stats">MAKE A CHART</a></li>
             <li><a href="?page=profile">MY PROFILE</a></li>
+            <li><a href="?page=contact">CONTACT</a></li>
             <?php if(in_array('ROLE_ADMIN', $_SESSION['role'])) {
                 echo "<li><a href=\"?page=admin\">ADMIN PANEL</a></li>";    
             }?>
+            <li id="logout"><a href="?page=logout">LOGOUT</a></li>
         </ul>
     </nav>
     <span class="logged-user"><?= $_SESSION['username'] ?></span>
     <form action="?page=logout" method="POST">
         <button id="btn-logout" class="btn-small" type="submit">LOGOUT</button>
     </form>
-    <img id="burger" src="Public/img/list.svg">
+    <div id="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
 </div>
 <script>
     const navSlide = () =>  {
@@ -46,6 +51,5 @@
             burger.classList.toggle('toggle');
         });
     }
-
     navSlide();
 </script>

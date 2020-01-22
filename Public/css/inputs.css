@@ -1,0 +1,65 @@
+.contact-form   {
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+
+input {
+    width: 100%;
+    color: #595F6E;
+    margin: 1em auto;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #707070;
+    color: #707070;
+    font-family: sans-serif;
+    margin-top: 2em;
+}
+
+form label::after  {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #1E0476;
+    transform: translateX(-101%);
+    transition: transform 0.5s ease;
+}
+
+.content-name   {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.5s ease;
+}
+
+form input:focus + .label-name .content-name   {
+    transform: translateY(-150%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #1E0478;
+}
+
+form input:valid + .label-name .content-name   {
+    transform: translateY(-150%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #1E0478;
+}
+
+form input:focus + .label-name::after, form input:valid + .label-name::after  {
+    transform: translateX(0%);
+}

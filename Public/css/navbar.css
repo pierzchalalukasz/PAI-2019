@@ -10,6 +10,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     background: #1E0476;
+    z-index: 2;
 }
 
 .navLogo    {
@@ -39,7 +40,7 @@ a  {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    padding: 1.75em 1em;
+    padding: 1.7em 1em;
     letter-spacing: .1em;
 }
 
@@ -87,7 +88,15 @@ a:hover {
     display: none;
 }
 
-.logout {
+#burger > div   {
+    width: 25px;
+    height: 3px;
+    background: #9B8CCC;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+#logout {
     display: none;
 }
 
@@ -101,23 +110,33 @@ a:hover {
         padding: .8em 0;
     }
 
-    a:hover {
-        background: #1E0476;
-        color: #FFFFFF;
-    }
-
     ul  {
         position: absolute;
         width: 40%;
         right: -40%;
-        top: 72px;
+        top: 74px;
         background-color: #1E0476;
         display: flex;
         flex-direction: column;
         align-items: center;
         transform: translateX(0%);
         transition: transform 0.5s ease-in;
-        z-index: 2;
+        border-top: 1px solid #8978BF;
+        opacity: .9;
+    }
+
+    a   {
+        /* border-bottom: 1px solid #8978BF; */
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: #1E0476;
+        color: #FFFFFF;
+        /* border-bottom: 3px solid #FFFFFF; */
+        letter-spacing: .2em;
+        opacity: 1;
+        transition: 0.3s;
     }
 
     li   {
@@ -139,8 +158,8 @@ a:hover {
         cursor: pointer;
     }
 
-    .logout {
-        display: box;
+    #logout {
+        display: inline-block;
     }
 }
 
@@ -164,4 +183,16 @@ a:hover {
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+.toggle .line-1  {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line-2  {
+    opacity: 0;
+}
+
+.toggle .line-3  {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="Public/css/contact.css" />
         <link rel="stylesheet" href="Public/css/navbar.css" />
+        <link rel="stylesheet" href="Public/css/contact.css" />
         <title>Wallet Stats | Contact</title>
     </head>
     <body>
@@ -19,15 +19,15 @@
                     <img id="contact-header-logo" src="Public/img/logo.svg"/>
                 </div>
             </div>
-            <form>
+            <form class="contact-form">
                 <div class="inputWrapper">
-                    <input type="text" name="e-mail" required />
+                    <input type="text" name="e-mail" required autocomplete="off" />
                     <label for="e-mail" class="label-name">
                         <span class="content-name">e-mail</span>
                     </label>
                 </div>
                 <div class="inputWrapper">
-                    <input type="text" name="subject" required />
+                    <input type="text" name="subject" required autocomplete="off"/>
                     <label for="subject" class="label-name">
                         <span class="content-name">Subject</span>
                     </label>

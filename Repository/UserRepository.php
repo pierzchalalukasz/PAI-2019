@@ -77,11 +77,22 @@ class UserRepository extends Repository {
 
     public function addLog(int $user_id, $date): void
     {
-        $stmt = $this->database->connect()->prepare('
-            INSERT INTO log (user_id, date) VALUES (:user_id, :date)
-        ');
-        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-        $stmt->bindParam(':date', $date);
-        $stmt->execute();
+        try {
+            $myPDO = $this->database->connect();
+            $myPDO->beginTransaction();
+
+            $stmt = $myPDO->prepare('
+                INSERT INTO log (user_id, date) VALUES (:user_id, :date)
+            ');
+            $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+            $stmt->bindParam(':date', $date);
+            $stmt->execute();
+            $myPDO->commit();
+        }   catch(PDOException $e)  {
+            if($myPDO->inTransaction()) {
+                $myPDO->rollback();
+            }
+            die();
+        }
     }
 }

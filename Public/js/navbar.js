@@ -1,10 +1,18 @@
-const navSlide = () =>  {
-    const burger = document.getElementById('burger');
-    const nav = document.querySelector('.nav-links');
+// const navSlide = () =>  {
+//     const burger = document.getElementById('burger');
+//     const nav = document.querySelector('.nav-links');
 
-    burger.addEventListener('click',()=>{
-        nav.classList.toggle('nav-active');
-    });
-}
+//     burger.addEventListener('click',()=>{
+//         nav.classList.toggle('nav-active');
 
-navSlide();
+//         navLinks.forEach((link, index) =>   {
+//             if(link.style.animation)    {
+//                 link.style.animation = '';
+//             }   else    {
+//                 link.style.animation = `navLinkFade 0.5s ease forwards`
+//             }
+//         })
+//     });
+// }
+
+// navSlide();

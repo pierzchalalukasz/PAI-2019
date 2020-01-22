@@ -32,14 +32,5 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="#" class="foot">ABOUT</a></li>
-                    <li><a href="#" class="foot">CONTACT</a></li>
-                    <li><a href="#" class="foot">TERMS & CONDITIONS</a></li>
-                </ul>
-            </nav>
-        </footer>
     </body>
 </html>
